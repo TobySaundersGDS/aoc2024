@@ -1,0 +1,3 @@
+leftInputRows ← ,/1 1 1 1 1 0 0 0 0 0 0 0 0 0/1000 14⍴(r.Data)
+rightInputRows ← ,/0 0 0 0 0 0 0 0 1 1 1 1 1 0/1000 14⍴(r.Data)
++\|(⍎¨leftInputRows[⍒leftInputRows]) - (⍎¨rightInputRows[⍒rightInputRows])
