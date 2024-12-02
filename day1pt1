@@ -1,3 +1,9 @@
+cmd←HttpCommand.New ''
+cmd.Command←'get'
+cmd.Headers←('Cookie:session=secret')
+cmd.URL←'https://adventofcode.com/2024/day/1/input'
+r ← cmd.Run
 leftInputRows ← ,/1 1 1 1 1 0 0 0 0 0 0 0 0 0/1000 14⍴(r.Data)
 rightInputRows ← ,/0 0 0 0 0 0 0 0 1 1 1 1 1 0/1000 14⍴(r.Data)
 +\|(⍎¨leftInputRows[⍒leftInputRows]) - (⍎¨rightInputRows[⍒rightInputRows])
++/((⍎¨rightInputRows)∊(⍎¨leftInputRows))×(⍎¨rightInputRows)
